@@ -1,0 +1,20 @@
+import java.util.*;
+
+//name the class
+public class StringReverse{
+//declare the main method  
+public static void main(String[] args){
+//declare a string variable to use later
+String s;
+Scanner scanner1 = new Scanner(System.in); //create a scanner object/instance with the Scanner class attributes. This comes from the package we imported at the beginning.
+System.out.println("Enter your string"); //from the pre-defined System class (that Java imports by default) print a message on the console for the user to read.
+s = scanner1.nextLine();//read the input and save in a string variable
+scanner1.close(); //Shut off the scanner
+s= reverse(s); //reverse string using the method outlined below
+System.out.println("Result after reversing a string is : "+s); //print result to console
+}
+
+public static String reverse(String s){ //declare a method name for the reversing method
+ return new StringBuilder(s).reverse().toString();//turn the string into a StringBuilder and use the reverse method in StringBuilder then turn it back into a string
+}
+}
